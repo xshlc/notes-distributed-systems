@@ -1,0 +1,189 @@
+{
+  "main": {
+    "id": "7c72714594e2b4e8",
+    "type": "split",
+    "children": [
+      {
+        "id": "77fc326de25734c4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e44302461bb343a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "computer_networking/ch1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "ch1"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "73851872734ebae3",
+    "type": "split",
+    "children": [
+      {
+        "id": "55038479105a41b2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7fd563e82f02f85b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "0834c5c03a6f9ac9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "3e82304f2cb5a35b",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "17fc8d6e937326d0",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d835fe39543927a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bdaabc41e51ac0fb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "computer_networking/Untitled.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Untitled"
+            }
+          },
+          {
+            "id": "2c0eee81355a34e2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "computer_networking/Untitled.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Untitled"
+            }
+          },
+          {
+            "id": "2234564b927d7521",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "59beb42c67bb674f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "computer_networking/Untitled.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Untitled"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "e44302461bb343a6",
+  "lastOpenFiles": [
+    "README.md",
+    "sme/user-story-diagram.png",
+    "sme/ticket-lifecycle-whiteboard.png",
+    "sme/sdc_and_ticket.md",
+    "sme",
+    "jobs/de_american_express.md",
+    "computer_networking/ch1.md",
+    "de_frameworks.md",
+    "de_platforms.md",
+    "jobs",
+    "de_in_demand_skills.md",
+    "computer_networking/1_overview.md",
+    "Pasted image 20250302135927.png",
+    "Welcome.md",
+    "computer_networking"
+  ]
+}
