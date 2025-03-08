@@ -115,3 +115,23 @@ Socket interface — a set of rules that the sending program must follow so that
 - Provided by end-systems attached to the Internet.
 - Specifies how a program running on one end system asks the Internet infrastructure to deliver data to a specific destination program running on another system. 
 
+"When you develop an Internet application, you too must choose one of the Internet's services for your application."
+
+Questions: What are packet switching and TCP/IP? What are routers? What kinds of communication links are present in the Internet? What is a distributed application? How can a thermostat or body scale be attached to the Internet? 
+
+### 1.1.3 What is a Protocol? 
+
+What is a protocol? What does it do? 
+
+#### A Human Analogy
+Unwillingness or inability to communicate.
+	If people run different protocols (for example, if one person has manners but the other does not, or if one understands the concept of time and the other does not) the protocols do not interoperate and no useful work can be accomplished. The same is true in networking—it takes two (or more) communicating entities running the same protocol in order to accomplish a task.
+
+#### Network Protocols
+
+A **protocol** defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event. 
+
+**Hardware-implemented protocols** in two physically connected computers control the flow of bits on the “wire” between the two network interface cards; congestion-control protocols in end systems control the rate at which packets are transmitted between sender and receiver; protocols in routers determine a packet’s path from source to destination. 
+
+Different protocols are used to accomplish different communication tasks.
+
