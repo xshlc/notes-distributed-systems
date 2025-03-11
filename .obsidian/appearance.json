@@ -1,5 +1,6 @@
 {
-  "cssTheme": "Minimal",
+  "cssTheme": "Blue Topaz",
   "interfaceFontFamily": "",
-  "textFontFamily": "DejaVu Sans,DejaVu Sans Mono"
+  "textFontFamily": "",
+  "showRibbon": true
 }

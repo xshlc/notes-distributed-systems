@@ -1,0 +1,23 @@
+{
+  "typomagical-text@@alignment": "align-justified",
+  "typomagical-text@@blockquote": "blockquote-plain",
+  "typomagical-text@@font-default": "Spectral",
+  "typomagical-title@@title-gradient": "ss-title-gradient",
+  "typomagical-title@@alignment-title": "align-title-center",
+  "typomagical-colour@@theme-variant": "obsidian",
+  "Appearance-dark@@theme-dark-style-select": "theme-dark-background-darker",
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-chocolate-topaz",
+  "blue-topaz-theme@@left-ribbon-style": "hide-left-ribbon-retention-drawer",
+  "blue-topaz-theme@@search-bar-style-option": "default-search-bar",
+  "Blue-Topaz-Codebox-Highlight@@code-theme-selection": "code-theme-bt-default",
+  "blue-topaz-theme@@scrollbar-style-option": "hover-scrollbars",
+  "blue-topaz-theme@@file-name-style-option": "file-name-wrapped",
+  "blue-topaz-theme@@clutter-free-headings": true,
+  "blue-topaz-theme@@file-bg-shape-option": "file-bg-pill",
+  "blue-topaz-theme@@dark-background-file": true,
+  "blue-topaz-theme@@remove-file-icons": true,
+  "blue-topaz-theme@@remove-first-folder-icon": false,
+  "blue-topaz-theme@@background-notebook-liked-switch": true,
+  "blue-topaz-theme@@notebook-liked-markdown-page-options": "notebook-liked-markdown-page-dotted-notebook-1",
+  "blue-topaz-theme@@retain-header-color": false
+}

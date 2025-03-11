@@ -135,3 +135,38 @@ A **protocol** defines the format and the order of messages exchanged between tw
 
 Different protocols are used to accomplish different communication tasks.
 
+## 1.2 The Network Edge 
+
+This section will... 
+1. move from the network edge to the network core. 
+2. examine switching and routing in computer networks.
+
+**host** == **end system**
+
+Types of hosts:
+- clients
+	- desktops, smartphones, etc.
+- servers
+	- data centers
+		- Google has 50-100 data centers, including about 15 large centers, each with more than 100,000 servers. 
+
+### 1.2.1 Access Networks
+
+**[[access network]]** — the network that physically connects an end system to the first router (or **edge router**) on a path from the end system to any other distant end system.
+
+#### Home Access: DSL, Cable, FTTH, Dial-Up, and Satellite 
+
+Two most prevalent types of broadband residential access:
+1. Digital subscriber line (DSL)
+	1. Same as local telephone company (telco). For DSL, telco also becomes the customer's ISP.
+	2. Customer’s DSL modem uses the existing telephone line  to exchange data with a digital subscriber line access multiplexer ([[DSLAM]]) located in the telco’s local central office ([[CO]]). The home’s DSL modem takes digital data and translates it to high- frequency tones for transmission over telephone wires to the CO; the analog signals from many such houses are translated back into digital format at the DSLAM.
+	3. Residential telephone lines carry both data and traditional telephone signals simultaneously.
+		1. Each are encoded at different frequencies.
+		2. A high-speed downstream channel, in the 50 kHz to 1 MHz band
+		3. A medium-speed upstream channel, in the 4 kHz to 50 kHz band
+		4. An ordinary two-way telephone channel, in the 0 to 4 kHz band
+		5. This makes the single DSL link appear as there were three separate links. 
+		6. Frequency-division multiplexing 
+	4. On the telco side, in the CO, the DSLAM separates the data and phone signals, and sends the data into the Internet. Hundreds or even thousands of households connect to a single DSLAM.
+	5. When downstream and upstream rates are different, the access is said to be asymmetric.
+2. Cable

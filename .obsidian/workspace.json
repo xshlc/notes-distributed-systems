@@ -8,31 +8,27 @@
         "type": "tabs",
         "children": [
           {
-            "id": "e44302461bb343a6",
+            "id": "06787f45214264cb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computer_networking/ch1.md",
+                "file": "computer_networking/ch1_computer_networks_and_the_internet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ch1"
+              "title": "ch1_computer_networks_and_the_internet"
             }
           },
           {
-            "id": "aeb1a965a21e9d93",
+            "id": "86dd2b53a647a563",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "computer_networking/ch1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "ch1"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -92,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200.5086555480957
   },
   "right": {
     "id": "17fc8d6e937326d0",
@@ -177,16 +173,23 @@
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
+      "daily-notes:Open today's daily note": true,
       "templates:Insert template": false,
       "command-palette:Open command palette": false
     }
   },
-  "active": "e44302461bb343a6",
+  "active": "7fd563e82f02f85b",
   "lastOpenFiles": [
-    "computer_networking/ch2.md",
-    "computer_networking/ch1.md",
+    "computer_networking/topics/DSLAM.md",
+    "computer_networking/ch1_computer_networks_and_the_internet.md",
+    "computer_networking/topics/CO.md",
+    "computer_networking/topics/access network.md",
+    "computer_networking/topics/type of data transmission.md",
+    "computer_networking/1_overview.md",
+    "computer_networking/topics",
     "README.md",
+    "Welcome.md",
+    "computer_networking/ch2.md",
     "sme/user-story-diagram.png",
     "sme/ticket-lifecycle-whiteboard.png",
     "sme/sdc_and_ticket.md",
@@ -196,9 +199,7 @@
     "de_platforms.md",
     "jobs",
     "de_in_demand_skills.md",
-    "computer_networking/1_overview.md",
     "Pasted image 20250302135927.png",
-    "Welcome.md",
     "computer_networking"
   ]
 }
