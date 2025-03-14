@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200.5086555480957
+    "width": 200.5086555480957,
+    "collapsed": true
   },
   "right": {
     "id": "17fc8d6e937326d0",
@@ -178,10 +179,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7fd563e82f02f85b",
+  "active": "06787f45214264cb",
   "lastOpenFiles": [
-    "computer_networking/topics/DSLAM.md",
     "computer_networking/ch1_computer_networks_and_the_internet.md",
+    "computer_networking/topics/DSLAM.md",
     "computer_networking/topics/CO.md",
     "computer_networking/topics/access network.md",
     "computer_networking/topics/type of data transmission.md",

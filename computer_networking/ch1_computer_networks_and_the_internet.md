@@ -167,6 +167,199 @@ Two most prevalent types of broadband residential access:
 		4. An ordinary two-way telephone channel, in the 0 to 4 kHz band
 		5. This makes the single DSL link appear as there were three separate links. 
 		6. Frequency-division multiplexing 
-	4. On the telco side, in the CO, the DSLAM separates the data and phone signals, and sends the data into the Internet. Hundreds or even thousands of households connect to a single DSLAM.
-	5. When downstream and upstream rates are different, the access is said to be asymmetric.
-2. Cable
+	4. On the customer side, a splitter separates the data and telephone signals arriving to the home and forwards the data signals to the DSL modem. 
+	5. On the telco side, in the CO, the DSLAM separates the data and phone signals, and sends the data into the Internet. Hundreds or even thousands of households connect to a single DSLAM.
+	6. DSL standards define multiple transmission rates (downstream and upstream).
+	7. When downstream and upstream rates are different, the access is said to be asymmetric.
+	8. The maximum rate is limited by the distance between the home and the CO. 
+2. Cable internet access
+	1. Makes use of the cable television's company's existing cable television infrastructure. 
+	2. Coaxial.
+	3. Fiber optics.
+	4. Hybrid fiber coax (HFC)
+	5. Requires special modems. called cable modems.
+	6. The *cable modem termination system (CMTS)* serves a similar function as DSL network's DSLAM ― turning the analog signal sent from the cable modems in many downstream homes back into digital format. 
+3. Difference:
+	1. Cable modems divide the HFC network into two channels, downstream and upstream.
+	2. DSL - access is asymmetric, with the downstream channel typically allocated a higher transmission rate than the upstream channel.
+4. Cable Internet access is a *shared broadcast medium*. 
+	1. Every packet sent by the head end travels downstream on every link to every home.
+	2. Every packet sent by a home travels on the upstream channel to the head.
+	3. If several users are simultaneously downloading a video file on the downstream channel, the actual rate at which each user receives its video file will be significantly lower than the aggregate cable downstream rate.
+	4. On the other hand, if there are only a few users and they are all web surfing, each user may receive web pages at the full cable downstream rate. 
+5. Because the upstream channel is also shared, a distributed multiple access protocol is needed to coordinate transmissions and avoid collisions.
+6. *Fiber to the home (FTTH)* ― provide an optical fiber path from the CO directly to the home. 
+7. There are several competing technologies for optical distribution from the CO to the homes. The simplest optical distribution network is called direct fiber, with one fiber leaving the CO for each home. More commonly, each fiber leaving the central office is actually shared by many homes; it is not until the fiber gets relatively close to the homes that it is split into individual customer-specific fibers.
+8. Two competing optical-distribution network architectures that perform this splitting:
+	1. Active optical networks (AONs)
+		1. A switched Ethernet.
+	2. Passive optical networks (PONs)
+		1. Used in Verizon FIOS service
+		2. Each home has an optical network terminator (ONT), which is connected by dedicated optical fiber to a neighborhood splitter. 
+		3. The splitter combines a number of homes (typically less than 100) onto a single, shared optical fiber, which connects to an optical line terminator (OLT) in the telco’s CO. 
+		4. The OLT, providing conversion between optical and electrical signals, connects to the Internet via a telco router.
+		5. In the home, users connect a home router (typically a wireless router) to the ONT and access the Internet via this home router. In the PON architecture, all packets sent from OLT to the splitter are replicated at the splitter (similar to a cable head end).
+	3. FTTH can potentially provide Internet access rates in the gigabits per second range. 
+9. Two other access network technologies:
+	1. Satellite link
+		1. StarBand
+		2. HughesNet
+	2. Dial-up access over traditional phone lines. 
+		1. Excruciatingly slow.
+
+#### Access in the Enterprise (and the Home): Ethernet and WiFi 
+**local area network (LAN)** ― used to connect an end system to an edge router. Ethernet is the most prevalent.
+
+The Ethernet switch, or network of such interconnected switches, is then in turn connected into the larger Internet. Users typically have greater speeds with Ethernet (100 Mbps to 10 Gbps access).
+
+**Wireless LAN** ― wireless users transmit/receive packets to/from an access point that is connected into the enterprise’s network (most likely using wired Ethernet), which in turn is connected to the wired Internet.
+- A wireless LAN user must typically be within a few tens of meters of the access point.
+- More colloquially known as WiFi, is now just about everywhere.
+
+Many homes combine broadband residential access
+(that is, cable modems or DSL) with these inexpensive wireless LAN technologies to create powerful home networks.
+
+#### Wide-Area Wireless Access: 3G and LTE
+
+Smartphones - iPhone and Android devices 
+
+These devices employ the same wireless infrastructure used for cellular telephony to send/receive packets through a base station, operated by the cellular network provider. 
+
+Unlike WiFi, a user need only be within a few tens of kilometers (as opposed to a few tens of meters) of the base station.
+
+Third-generation (3G) wireless and fourth-generation (4G) wireless -  provides packet-switched wide-area wireless Internet access.
+
+LTE (Long-Term Evolution) - can achieve rates in excess of 10 Mbps. 
+
+### 1.2.2 Physical Media
+
+A brief overview of transmission media that are commonly used in the Internet (already discussed are fiber and coaxial for HFC, copper wire for DSL and Ethernet. radio spectrum for mobile access networks).
+
+A bit get tossed and passed around through a series of transmitter-receiver pairs. For each transmitter-receiver pair, the bit is sent by propagating electromagnetic waves or optical pulses across a **physical medium**.
+1. Physical medium can take many shapes and forms.
+
+Two categories of physical medium:
+1. Guided media
+	1. Waves are guided along a solid medium.
+	2. Fiber-optic cable
+	3. A twisted pair of copper wire
+	4. Coaxial cable
+	5. The cost of physical link is relatively minor compared with other networking costs.
+		1. The labor cost for installation of the physical link can be orders of magnitude higher than the cost of the material. 
+		2. For this reason, many builders install twisted pair, optical fiber, and coaxial cable in every room in a building.
+			1. Money is saved by not having to lay additional wires in the future.
+2. Unguided media
+	1. Waves propagate in the atmosphere and in outer space.
+	2. Wireless LAN / WiFi
+	3. Digital satellite channel
+	
+#### Twisted-Pair Copper Wire
+Least expensive and most commonly used guided transmission medium. 
+Used by telephone networks for hundreds of years. 
+Twisted pair consists of:
+1. Two insulated copper wires (around 1mm thick)
+2. Arranged in a regular spiral pattern. 
+3. Twisted to reduce the electrical interference from similar pairs close by.
+4. Typically, a number of pairs are bundled together in a cable by wrapping the pairs in a protective shield. 
+A wire pair constitutes a single communication link. 
+
+Unshielded twisted pair (UTP) - commonly used for computer networks within a building for LANs
+- Data rates that can be achieved depend on the thickness of the wire and the distance between transmitter and receiver. 
+
+Modern twisted-pair technology
+- For example, category 6a cable
+- Can achieve data rates of 10 Gbps for distances up to hundreds of meters. 
+- Fiber-optics did not completely replace twisted pair. 
+- Instead, twisted pair has emerged as the dominant solution for high-speed LAN networking.
+
+DSL (Digital subscriber line) technology has enabled residential users to access the Internet at tens of Mbps over twisted pair. 
+
+#### Coaxial Cable
+- Like twisted pair. consists of two copper conductors, but the two conductors are concentric rather than parallel. 
+- Can achieve high data transmission rates.
+- Common in cable television systems. 
+- Coupled with the cable modem to provide residential users with Internet access.
+
+In cable television and cable Internet access, the transmitter shifts the digital signal to a specific frequency band, and the resulting analog signal is sent from the transmitter to one or more receivers.
+
+Coaxial cable can be used as a guided shared medium. Specifically, a number of end systems can be connected directly to the cable, with each of the end systems receiving whatever is sent by the other end systems.
+
+
+#### Fiber Optics
+An optical fiber is a thin, flexible medium that conducts pulses of light, with each pulse representing a bit. 
+- A single optical fiber can support tremendous bit rates, upp to tens or even hundreds of gigabits per second. 
+- They are immune to electromagnetic interference, have very low signal attenuation up to 100 kilometers, and are very hard to tap. 
+- Preferred long-haul guided transmission media, particularly for overseas links
+
+High-cost of optical devices (transmitters, receivers, switches) hindered their deployment for short-haul transport. 
+
+The Optical Carrier (OC) standard link speeds range from 51.8 Mbps to 39.8 Gbps; these specifications are often referred to as OC-n, where the link speed equals n ∞ 51.8 Mbps. Standards in use today include OC-1, OC-3, OC-12, OC-24, OC-48, OC-96, OC-192, OC-768 provide coverage of various aspects of optical networking.
+
+#### Terrestrial Radio Channels 
+
+Radio channels carry signals in the electromagnetic spectrum. 
+
+Pros:
+- Require no physical wire to be installed.
+- Can penetrate walls.
+- Provide connectivity to mobile user.
+- Can potentially carry a signal for long distances.
+
+The characteristics of a radio channel depend significantly n the propagation environment and the distance over which a signal is to be carried. 
+
+Cons:
+- Environmental considerations determine path loss and shadow fading (which decrease the signal strength as the signal travels over a distance and around/through obstructing objects), multipath fading (due to signal reflection off of interfering objects), and interference (due to other transmissions and electromagnetic signals).
+
+Three groups:
+1. Those that operate over a very short distance.
+	1. A couple meters.
+	2. Personal devices.
+		1. Wireless headphones.
+		2. Keyboards.
+		3. Medical devices.
+2. Those that operate in local areas.
+	1. 10 to a few 100 meters.
+	2. Wireless LAN / WiFi
+	3. Local-area radio channels.
+3. Those that operate in a wide-area.
+	1. 10s of kilometers. 
+	2. Cellular access technologies.
+
+#### Satellite Radio Channels
+A communication satellite links two or more Earth-based microwave transmitter/receivers, known as ground stations. 
+
+The satellite receives transmission on one frequency band, regenerates the signal using a repeater, and transmits the signal on another frequency. 
+
+Two types of satellites used for communications:
+1. Geostationary satellites
+	1. Permanently remain above the same spot on Earth.
+	2. Orbits at 36,000 kilometers above Earth’s surface.
+	3. Huge distance from ground station through satellite back to ground station introduces a substantial signal propagation delay of 280 milliseconds.
+2. Low-earth orbiting (LEO) satellites
+	1. Does not remain permanently above one spot on Earth.
+	2. Rotates around Earth (just as the Moon does) and may communicate with each other, as well as with ground stations.
+
+---
+
+## 1.3 The Network Core
+
+In a network application, end systems exchange ***messages*** with each other. 
+
+Messages:
+1. Can contain anything the application wants. 
+2. May perform a control function.
+	1. For example, the "Hi" messages in our handshaking example (Figure 1.2).
+3. Can contain data.
+	1. Email message.
+	2. JPEG image.
+	3. MP3 audio file. 
+
+To send a message from a source end system to destination end system, the source breaks long messages into small chunks of data known as **packets**. Between source and destination, each packet travels through communication links and **packet switches**.
+- Two main types of packet switches:
+	1. Routers
+	2. Link-layer switches
+
+Packets are transmitted over each communication link at a rate equal to the *full* transmission rate of the link. 
+
+So, if a source end system or a packet switch is sending a packet of L bits over a link with transmission rate R bits/sec, then the time to transmit the packet is L / R seconds.
+
