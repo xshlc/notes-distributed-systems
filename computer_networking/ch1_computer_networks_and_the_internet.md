@@ -343,6 +343,10 @@ Two types of satellites used for communications:
 
 ## 1.3 The Network Core
 
+The *network core* is the mesh of packet switches and links that interconnects the Internet's end systems.
+
+### 1.3.1 Packet Switching 
+
 In a network application, end systems exchange ***messages*** with each other. 
 
 Messages:
@@ -363,3 +367,41 @@ Packets are transmitted over each communication link at a rate equal to the *ful
 
 So, if a source end system or a packet switch is sending a packet of L bits over a link with transmission rate R bits/sec, then the time to transmit the packet is L / R seconds.
 
+#### Store-and-Forward Transmission 
+Most packets use **store-and-forward transmission** at the inputs to the links. 
+
+***Store-and-forward transmission*** ― means that packet switch must receive the entire packet before it can begin to transmit the first bit of the packet onto the outbound link. 
+
+Consider this: Suppose source has transmitting some of packet 1, and the front of packet 1 has already arrived at the router. Because the router employs store-and-forwarding, at this instant of time, the router cannot transmit the bits it has received; instead it must first *buffer* (or "store") the packet's bit. Only after the router has received *all* of the packet's bits can it begin to transmit (or "forward") the packet onto the outbound link. 
+
+Routers need to receive, store, and process the entire packet before forwarding. 
+
+The **[[end-to-end delay]]** formula:
+$$d_{end-to-end} = N \frac{L}{R}$$
+General case of sending one packet from source to destination over a path consisting of $N$ links each of rate $R$ (thus, there are $N - 1$ routers between source and destination). 
+
+You may now want to try to determine what the delay would be for $P$ packets sent over a series of $N$ links. 
+
+#### Queuing Delays and Packet Loss
+- Each packet has multiple links attached to it.
+- For each attached link, the packet switch has an **output buffer** (or output queue). 
+	- Output buffer ― stores packets that the router is about to send into that link
+		- Plays a key role in packet switching.
+		- If an arriving packet needs to transmitted onto a link but finds the link busy with the transmission of another packet, the arriving packet must wait in the output buffer. 
+	- In addition to the store-and-forward delays, packets suffer output buffer queuing delays. 
+		- These delays are variable and depend on the level of congestion in the network.
+		- The amount of buffer space is finite. 
+			- An arriving packet may find that the buffer is completely full with other packets waiting for transmission. 
+			- In this case, **packet loss** will occur.
+	- ***Packet loss*** ― when either the arriving packet or one of the already-queued packets is dropped
+- Scenario:
+	- Hosts A and B send packets to Host E via a router.
+	- Hosts A and B use 100 Mbps Ethernet links, but the router directs packets to a slower 15 Mbps link.
+	- If the arrival rate of packets exceeds 15 Mbps, congestion occurs at the router.
+	- Example: If Hosts A and B each send 5 packets back-to-back, most packets will wait in the queue.
+- Real-World Analogy
+    - Congestion in networks is compared to everyday situations like waiting in line at a bank or tollbooth.
+summary:
+In a network, packets (chunks of data) can face delays and even get lost if the network is too busy. When packets arrive at a router faster than they can be sent out, they pile up in a waiting area called a buffer. If the buffer gets full, some packets are dropped.
+
+For example, imagine two computers (Hosts A and B) sending data to another computer (Host E) through a router. The router can only send data at 15 Mbps, but the two computers are sending data at 100 Mbps. If both send a lot of data at the same time, the router gets overwhelmed, and packets have to wait in line. This is like waiting in line at a bank or tollbooth when there are too many people. If the line gets too long, some people (or packets) might have to leave.
