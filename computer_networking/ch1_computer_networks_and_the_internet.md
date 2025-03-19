@@ -401,7 +401,71 @@ You may now want to try to determine what the delay would be for $P$ packets sen
 	- Example: If Hosts A and B each send 5 packets back-to-back, most packets will wait in the queue.
 - Real-World Analogy
     - Congestion in networks is compared to everyday situations like waiting in line at a bank or tollbooth.
-summary:
+**Summary:**
 In a network, packets (chunks of data) can face delays and even get lost if the network is too busy. When packets arrive at a router faster than they can be sent out, they pile up in a waiting area called a buffer. If the buffer gets full, some packets are dropped.
 
 For example, imagine two computers (Hosts A and B) sending data to another computer (Host E) through a router. The router can only send data at 15 Mbps, but the two computers are sending data at 100 Mbps. If both send a lot of data at the same time, the router gets overwhelmed, and packets have to wait in line. This is like waiting in line at a bank or tollbooth when there are too many people. If the line gets too long, some people (or packets) might have to leave.
+
+#### Forwarding Tables and Routing Protocols 
+A router takes a packet arriving on one of its attached communication links and forwards that packet onto another one of its attached communication links. 
+
+But how does the router determine which link it should forward the packet onto? 
+
+Packet forwarding is done in different ways in different types of computer networks. 
+
+How it's done on the Internet:
+- Every end system has an IP address.
+- When a source end system wants to send a packet to a destination end system, the source includes the destination's IP address in the packet's header. 
+	- As with postal addresses, this address has a hierarchical structure. 
+- When a packet arrives at a router in the network, the router examines a portion of the packet's destination address and forwards the packet to an adjacent router. 
+- Each router has a **forwarding table** that maps destination addresses (or portions of the destination addresses) to that router's outbound link. 
+	- The router then directs the packet to its outbound link. 
+- *Analogy*: The end-to-end routing process is analogous to a car driver who does not use maps but instead prefers to ask for directions. 
+- A router uses a packet’s destination address to index a forwarding table and determine the appropriate outbound link. But this statement begs yet another question: How do forwarding tables get set? Are they configured by hand in each and every router, or does the Internet use a more automated procedure? This issue will be studied in depth in Chapter 5.
+- The Internet has **routing protocols** that are used to automatically set the forwarding tables. 
+	- For example, a routing protocol may determine the shortest path from each router to each destination and use the shortest path results to configure the forwarding tables in the routers. 
+- How would you actually like to see the end-to-end route that packets take in the Internet? 
+	- Trace-route program: www.traceroute.org 
+
+### 1.3.2 Circuit Switching 
+Two fundamental approaches to moving data through a network of links and switches:
+1. **[[Circuit switching]]**
+2. **[[Packet switching]]** (already covered in previous section)
+
+*Circuit-switched networks*
+- The resources needed along a path (buffers, link transmission rate) to provide for communication between the end systems are reserved for the duration of the communication session between the end systems. 
+- Packet-switch networks -> these resources are not reserved.
+	- A session's messages use the resources on demand.
+		- as a consequence, may have to wait (queue) for access to a communication link. 
+- Traditional telephone networks are examples of circuit-switched networks. 
+	- Before the sender can send information, the network must establish a connection between the sender and the receiver. 
+	- a **circuit** in telephony ― a bona fide connection for which the switches on the path between the sender and the receiver maintain connection state for that connection. 
+	- When the network establishes the circuit, it also reserves a constant transmission rate in the network's links (representing a fraction of each link's transmission capacity) for the duration of the connection. 
+	- Since a given transmission rate has been *reserved* for this sender-receiver connection, the sender can transfer the data to the receiver at the *guaranteed constant rate*.
+	- 
+
+"The Internet makes its best effort to deliver packets in a timely manner, but it does not make any guarantees."
+
+#### Multiplexing in Circuit-Switched Networks 
+
+
+### 1.3.3 A Network of Networks 
+
+The network of networks that forms the Internet has evolved into a very complex structure. Much of this evolution is driven by economics and national policy, rather than by performance considerations.
+
+Recall that the overarching goal is to interconnect the access ISPs so that all end systems can send packets to each other. One naive approach would be to have each access ISP directly connect with every other access ISP. Such a mesh design is, of course, much too *costly* for the access ISPs, as it would require each access ISP to have a separate communication link to each of the hundreds of thousands of other access ISPs all over the world.
+
+Internet [[network structures]]: 
+1. Network Structure 1 ―  interconnects all of the access ISPs with a single global transit ISP
+2. Network Structure 2 ―  consists of the hundreds of thousands of access ISPs and multiple global transit ISPs
+	- a two-tier hierarchy with global transitp providers residing at the top tier and access ISPs at the bottom tier
+3. Network Structure 3 ― multi-tier hierarchy 
+4. Network Structure 4 ― consisting of access ISPs, regional ISPs, tier-1 ISPs, PoPs, multi-homing, peering, and IXPs
+	- points of presence **PoP** - a group of one or more routers at the same location in the provider's network where customer ISPs can connect into the provider ISP
+	- **multi-home** - connect two or more provider ISPs
+	- Internet exchange points **IXPs** - a meeting point where multiple ISPs can peer together
+5. Network Structure 5 — builds on top of Network Structure 4 by adding **content-provider networks** 
+
+[[Evolution to network structures]]
+
+
