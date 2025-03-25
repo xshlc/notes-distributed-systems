@@ -15,7 +15,7 @@ Overview is structured as:
 5. **Data in a computer network**
     1. Delay
     2. Loss
-    3. Throughput
+    3. Throughput6
     4. Simple quantitative models for end-to-end throughput and delay
     5. Models that take into account transmission, propagation, and queuing delays
 6. **Key architectural principles**
@@ -468,4 +468,92 @@ Internet [[network structures]]:
 
 [[Evolution to network structures]]
 
+## 1.4 Delay, Loss, and Throughput in Packet-Switched Networks
+
+The Internet can be viewed as an infrastructure that provides services to distributed applications running on end systems. Ideally, we would like Internet services to be able to move as much data as we want between any two end systems, instantaneously, without any loss of data. 
+- This goal is unachievable in reality.
+	- Due to physical laws of reality. 
+- Computer networks necessarily constrain throughput (the amount of data per second that can be transferred) 
+	- between end systems
+	- introduce delays between end systems
+	- and can actually lose packets. 
+
+### 1.4.1 Overview of Delay in Packet-Switched Networks
+
+*Recall that:* 
+- A packet travels from one node (host or router) to the subsequent node (host or router), the packet suffers from several types of delays at *each node* along this path.
+	- A packet starts in a host (the source).
+	- The packet passes through a series of routers.
+	- The packet ends its journey in another host (the destination).
+- Important types of delays:
+	- nodal-processing delay
+	- queuing delay
+	- transmission delay
+	- propagation delay
+- Together, these delays accumulate to give a **total nodal delay**. 
+- Performance is greatly affected by network delays.
+
+#### Types of Delays
+
+##### Processing Delay
+**processing delay** ― the time required to examine the packet's header and determine where to direct the packet.
+- can also include other factors:
+	- time needed to check for bit-level errors in the packet that occurred in transmitting the packet's bits from the upstream node to router A. 
+Processing delays in high-speed routers are typically on the order of *microseconds* or less.
+
+After this nodal processing, the router directs the packet to the queu that precedes the link to router B. 
+
+##### Queuing Delay
+**queuing delay** ― occurs when a packet waits to be transmitted onto the link.
+- length of the delay of a specific packet depends on the number of earlier-arriving packets that are queued and also waiting.
+If the queue is empty and no other packet is currently transmitted, the packet's queuing delay will be *zero*. 
+If traffic is heavy and there's many other packets in the queue, the queuing delay will be long. 
+
+The number of packets that an arriving packet might expect to find is a function of the intensity and nature of the traffic arriving at the queue. 
+
+Can be in the order of microseconds to milliseconds. 
+
+##### Transmission Delay
+Assuming that packets are transmitted in FIFO (first-come-first-serve) manner, as is common in packet-switched networks, the packet can only be transmitted only after all the packets that have arrived before it have been transmitted. 
+
+Length of packet = $L$ bits
+Transmission rate of the link from router A to router B = $R$ bits/sec
+
+Examples: 
+- 10 Mbps Ethernet link, $R$ = 10 Mbps 
+- 100 Mbps Ethernet link, $R$ = 100 Mbps
+The transmission rate is $L/R$. 
+- amount of time required to push (transmit) all the packet's bits into the link
+
+Typically on the order of microseconds to milliseconds.
+
+##### Propagation Delays
+**propagation delay** ― the time required to propagate from the beginning of the link to router B
+- occurs once a bit is pushed into the link
+- when packet needs to propagate to router B
+- propagation speeds depends on the physical medium of the link 
+	- fiber-optics. twisted-pair copper wire, etc.
+
+Propagation speeds are in the range of:
+$$2\times 10^8 \; meters/sec\enspace to\enspace 3\times 10^8 \; meters/sec$$
+.. which is equal to, or a little less than, the speed of light. 
+
+Distance between two routers divided by the propagation speed. 
+
+propagation delay = $d/s$ 
+$d$ = distance between router A and B
+$s$ = propagation speed of the link
+
+Once the last bit of the packet propagates to node B, it and all the preceding bits of the packet are stored in router B. The whole process then continues with router B now performing the forwarding. 
+
+In wide-area networks, propagation delays are on the order of milliseconds. 
+
+##### Comparing Transmission and Propagation Delay
+The difference is subtle but important. 
+
+The **transmission delay** is the amount of time required for the router to push out the packet; it is a function of the packet’s length and the transmission rate of the link, but *has nothing to do with the distance between the two routers*. 
+
+The **propagation delay**, on the other hand, is the time it takes a bit to propagate from one router to the next; it is a function of the distance between the two routers, but *has nothing to do with the packet’s length or the transmission rate of the link*.
+
+https://youtu.be/zUPayNytbgw?si=VeWaUFgv9Z1aLkXZ
 

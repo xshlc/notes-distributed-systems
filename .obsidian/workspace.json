@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "computer_networking/topics/Circuit switching.md",
+                "file": "data_intensive_applications/0_preface.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Circuit switching"
+              "title": "0_preface"
             }
           },
           {
@@ -196,8 +196,11 @@
   "active": "06787f45214264cb",
   "lastOpenFiles": [
     "computer_networking/ch1_computer_networks_and_the_internet.md",
-    "().md",
+    "data_intensive_applications/0_preface.md",
+    "data_intensive_applications/topics",
+    "data_intensive_applications",
     "computer_networking/topics/Circuit switching.md",
+    "().md",
     "computer_networking/topics/Packet switching.md",
     "computer_networking/topics/Evolution to network structures.md",
     "computer_networking/topics/network structures.md",
